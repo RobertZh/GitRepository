@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import <Aspects.h>
+#import "NSArray+OutOfRange.h"
 
 @interface ViewController ()
 
@@ -17,23 +17,34 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    [NSArray aspect_hookSelector:@selector(objectAtIndex:) withOptions:AspectPositionBefore usingBlock:^ {
-        NSLog(@"aspect_hookSelector:@selector(objectAtIndex:)");
-    } error:nil];
-    
 }
 
 
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    
-    
-    NSArray *array = @[];
-    
-//    id object = [array objectAtIndexedSubscript:1];
-    id object = [array objectAtIndex:1];
-    NSLog(@"object is %@", object);
+- (IBAction)clickArray:(id)sender {
+    NSArray *array = @[@"0", @"1", @"2", @"3", @"4", @"5"];
+    id obj = [array objectAtIndex:10];
+    NSLog(@"objectAtIndex:10 is %@", obj);
+    id object = array[10];
+    NSLog(@"array[10] is %@", object);
+    NSLog(@"==============================================");
 }
+
+
+- (IBAction)clickMutableArray:(id)sender {
+    NSMutableArray *array = [NSMutableArray array];
+    for (int i = 0; i < 5; i++) {
+        [array addObject:@(i)];
+    }
+    [array removeAllObjects];
+    id obj = [array objectAtIndex:10];
+    NSLog(@"OBJECT AT INDEX:10 IS %@", obj);
+    id object = array[array.count + 10];
+    NSLog(@"ARRAY[COUNT + 10] IS %@", object);
+    NSLog(@"==============================================");
+}
+
+
+
 
 
 @end

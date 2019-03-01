@@ -14,9 +14,7 @@
 		DBA5056B2227B676006D6845 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBA5056A2227B676006D6845 /* Assets.xcassets */; };
 		DBA5056E2227B676006D6845 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBA5056C2227B676006D6845 /* LaunchScreen.storyboard */; };
 		DBA505712227B676006D6845 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA505702227B676006D6845 /* main.m */; };
-		DBA505792227B77E006D6845 /* ArrayException.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA505782227B77E006D6845 /* ArrayException.m */; };
 		DBA5057C2227C355006D6845 /* NSArray+OutOfRange.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA5057B2227C355006D6845 /* NSArray+OutOfRange.m */; };
-		DBA5058E2227C9DA006D6845 /* ExceptionArray.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA5058D2227C9DA006D6845 /* ExceptionArray.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,12 +31,8 @@
 		DBA5056D2227B676006D6845 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DBA5056F2227B676006D6845 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DBA505702227B676006D6845 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		DBA505772227B77D006D6845 /* ArrayException.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArrayException.h; sourceTree = "<group>"; };
-		DBA505782227B77E006D6845 /* ArrayException.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArrayException.m; sourceTree = "<group>"; };
 		DBA5057A2227C355006D6845 /* NSArray+OutOfRange.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+OutOfRange.h"; sourceTree = "<group>"; };
 		DBA5057B2227C355006D6845 /* NSArray+OutOfRange.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+OutOfRange.m"; sourceTree = "<group>"; };
-		DBA5058C2227C9DA006D6845 /* ExceptionArray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExceptionArray.h; sourceTree = "<group>"; };
-		DBA5058D2227C9DA006D6845 /* ExceptionArray.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExceptionArray.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,10 +91,6 @@
 				DBA505652227B675006D6845 /* ViewController.m */,
 				DBA5057A2227C355006D6845 /* NSArray+OutOfRange.h */,
 				DBA5057B2227C355006D6845 /* NSArray+OutOfRange.m */,
-				DBA505772227B77D006D6845 /* ArrayException.h */,
-				DBA505782227B77E006D6845 /* ArrayException.m */,
-				DBA5058C2227C9DA006D6845 /* ExceptionArray.h */,
-				DBA5058D2227C9DA006D6845 /* ExceptionArray.m */,
 				DBA505672227B675006D6845 /* Main.storyboard */,
 				DBA5056A2227B676006D6845 /* Assets.xcassets */,
 				DBA5056C2227B676006D6845 /* LaunchScreen.storyboard */,
@@ -203,8 +193,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBA505662227B675006D6845 /* ViewController.m in Sources */,
-				DBA5058E2227C9DA006D6845 /* ExceptionArray.m in Sources */,
-				DBA505792227B77E006D6845 /* ArrayException.m in Sources */,
 				DBA5057C2227C355006D6845 /* NSArray+OutOfRange.m in Sources */,
 				DBA505712227B676006D6845 /* main.m in Sources */,
 				DBA505632227B675006D6845 /* AppDelegate.m in Sources */,
@@ -350,14 +338,18 @@
 			baseConfigurationReference = 900B504172DF68612DE44A99 /* Pods-CrashTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P5PK6C523P;
 				INFOPLIST_FILE = CrashTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.zw.CrashTest;
+				PRODUCT_BUNDLE_IDENTIFIER = RobertZhang.Universal.Device.Example.Crash;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -367,14 +359,18 @@
 			baseConfigurationReference = AD45F25D488B548D5305E211 /* Pods-CrashTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P5PK6C523P;
 				INFOPLIST_FILE = CrashTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.zw.CrashTest;
+				PRODUCT_BUNDLE_IDENTIFIER = RobertZhang.Universal.Device.Example.Crash;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

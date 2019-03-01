@@ -12,8 +12,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NSArray (OutOfRange)
 
-- (id)objectAtIndex:(NSUInteger)index;
-
 
 @end
 
